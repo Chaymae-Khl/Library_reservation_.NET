@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3507a55ff21e4a0e9e96b21855f1e16d" Name="Diagram1">
+        <EntityTypeShape EntityType="LibraryMangModel.Administrator" Width="1.5" PointX="6.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMangModel.Book" Width="1.5" PointX="1.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMangModel.Reservation" Width="1.5" PointX="4.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMangModel.Student" Width="1.5" PointX="1.875" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="LibraryMangModel.FK__Reservati__dateO__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMangModel.FK__Reservati__id_St__412EB0B6" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
