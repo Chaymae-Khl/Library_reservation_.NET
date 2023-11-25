@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -11,30 +12,37 @@ namespace MyLibraryService.MyServices
     // NOTE: In order to launch WCF Test Client for testing this service, please select StudentService.svc or StudentService.svc.cs at the Solution Explorer and start debugging.
     public class StudentService : IStudentService
     {
+        private LibraryMangEntities myservice = new LibraryMangEntities();
+
         public void AddStudent(Student student)
         {
-            throw new NotImplementedException();
+            myservice.Students.Add(student);
+            myservice.SaveChanges();
         }
 
         public void DeleteStudent(int id)
         {
-            throw new NotImplementedException();
+            Student exectinStudent=GetStudent(id);
+            myservice.Students.Remove(exectinStudent);
+            myservice.SaveChanges();
         }
 
 
         public Student GetStudent(int id)
         {
-            throw new NotImplementedException();
-        }
+            return myservice.Students.Find(id);
+         }
 
         public List<Student> GetStudents()
         {
-            throw new NotImplementedException();
+            return myservice.Students.ToList();
         }
 
         public void UpdateStudent(Student student)
         {
-            throw new NotImplementedException();
+            Student exectingStudent = GetStudent(student.id);
+            myservice.Entry(exectingStudent).CurrentValues.SetValues(student);
+            myservice.SaveChanges();
         }
     }
 }

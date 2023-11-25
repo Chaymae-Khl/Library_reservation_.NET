@@ -11,15 +11,20 @@ namespace MyLibraryService.MyServices
     // NOTE: In order to launch WCF Test Client for testing this service, please select ReservationService.svc or ReservationService.svc.cs at the Solution Explorer and start debugging.
     public class ReservationService : IReservationService
     {
-       
+        private LibraryMangEntities myservice = new LibraryMangEntities();
+
+
         public void MakeReservation(Reservation reservation)
         {
-            throw new NotImplementedException();
+            myservice.Reservations.Add(reservation);
+            myservice.SaveChanges();
         }
 
         public void RemoveReservation(int id)
         {
-            throw new NotImplementedException();
+           Reservation exectingReserv =myservice.Reservations.Find(id);
+            myservice.Reservations.Remove(exectingReserv);
+            myservice.SaveChanges();
         }
     }
 }

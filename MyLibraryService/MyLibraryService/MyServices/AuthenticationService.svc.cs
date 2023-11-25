@@ -11,20 +11,19 @@ namespace MyLibraryService.MyServices
     // NOTE: In order to launch WCF Test Client for testing this service, please select AuthenticationService.svc or AuthenticationService.svc.cs at the Solution Explorer and start debugging.
     public class AuthenticationService : IAuthenticationService
     {
+        private LibraryMangEntities myservice=new LibraryMangEntities();
 
         public string GetName(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Login(string login, string password)
+        public bool Login(string login, string password)
         {
-            throw new NotImplementedException();
+           myservice.Administrators.Any(u=>u.ad_login==login && u.ad_password==password);
+            return true;
         }
 
-        public void Logout()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
