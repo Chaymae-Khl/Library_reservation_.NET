@@ -16,5 +16,7 @@ namespace MyLibraryService.MyServices
 
         [OperationContract]
         String GetName(int id);
+        [OperationContract]
+        void register(Administrator admin);
     }
 }

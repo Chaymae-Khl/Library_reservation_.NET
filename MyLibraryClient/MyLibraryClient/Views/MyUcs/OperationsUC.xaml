@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="MyLibraryClient.Views.MyUcs.OperationsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyLibraryClient.Views.MyUcs"
+             xmlns:MyClass="clr-namespace:StudentsServiceReference"
+             xmlns:MyToolsRef="clr-namespace:MyLibraryClient.MyTools"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <DataTemplate x:Key="StudentDataTemplate" DataType="{x:Type MyClass:Students}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="22" />
+                    <ColumnDefinition Width="82" />
+                    <ColumnDefinition Width="82" />
+                    <ColumnDefinition Width="82" />
+                    <!-- Add more ColumnDefinitions as needed -->
+                </Grid.ColumnDefinitions>
+               
+        
+        <!-- Data Rows -->
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding id}" />
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding firstName}" />
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding lastName}" />
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding cin}" />
+        </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="BookDataTemplate" DataType="{x:Type MyClass:Book}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="22" />
+                    <ColumnDefinition Width="111" />
+                    <ColumnDefinition Width="111" />
+                    <ColumnDefinition Width="111" />
+                    <!-- Add more ColumnDefinitions as needed -->
+                </Grid.ColumnDefinitions>
+
+                <!-- Data Rows -->
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding id}"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding title}"/>
+                <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding author}"/>
+                <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding price}"/>
+            </Grid>
+
+        </DataTemplate>
+        <MyToolsRef:ListSelector x:Key="ListSelector" />
+    </UserControl.Resources>
+
+
+
+
+
+
+    <Grid Background="#FFEDCCCC">
+        <ListBox Margin="199,122,79,48" ItemsSource="{Binding listOfObjects}" 
+                 ItemTemplateSelector="{StaticResource ListSelector}" SelectedItem="{Binding selectedRow}" >
+                 
+        </ListBox>
+        <TextBox HorizontalAlignment="Left" Margin="199,81,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="296" Height="28"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="62,139,0,0" VerticalAlignment="Top" Height="39" Width="106" Command="{Binding AddButton}"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="62,215,0,0" VerticalAlignment="Top" Height="47" Width="106" Command="{Binding deleteButton}"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="62,296,0,0" VerticalAlignment="Top" Height="41" Width="106" Command="{Binding UpdateButton}" />
+        <Label x:Name="OpsTitle"  HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" Width="232" FontSize="22" Height="50"/>
+        <Button Content="Menu" HorizontalAlignment="Left" Margin="25,26,0,0" VerticalAlignment="Top" Height="50" Width="109" Command="{Binding MenuButton}"/>
+
+    </Grid>
+</UserControl>

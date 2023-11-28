@@ -20,10 +20,13 @@ namespace MyLibraryService.MyServices
 
         public bool Login(string login, string password)
         {
-           myservice.Administrators.Any(u=>u.ad_login==login && u.ad_password==password);
+            myservice.Administrators.Where(s => s.ad_login == login && s.ad_password == password).FirstOrDefault();
             return true;
         }
 
-        
+        public void register(Administrator admin)
+        {
+            myservice.Administrators.Add(admin);
+        }
     }
 }

@@ -17,5 +17,9 @@ namespace MyLibraryService.MyServices
         [OperationContract]
         void RemoveReservation(int id);
 
+        [OperationContract]
+
+        List<Reservation> GetReservations();
+
     }
 }

@@ -12,6 +12,7 @@ namespace MyLibraryService
     [ServiceContract]
     public interface IService1
     {
-
+        [OperationContract]
+        List<Book> GetBooks();
     }
 }

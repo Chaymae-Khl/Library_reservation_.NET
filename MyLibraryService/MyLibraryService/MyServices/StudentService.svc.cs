@@ -12,7 +12,14 @@ namespace MyLibraryService.MyServices
     // NOTE: In order to launch WCF Test Client for testing this service, please select StudentService.svc or StudentService.svc.cs at the Solution Explorer and start debugging.
     public class StudentService : IStudentService
     {
-        private LibraryMangEntities myservice = new LibraryMangEntities();
+        private LibraryMangEntities myservice ;
+
+        public StudentService()
+        {
+            myservice = new LibraryMangEntities();
+            myservice.Configuration.LazyLoadingEnabled = false;
+            myservice.Configuration.ProxyCreationEnabled = false;
+        }
 
         public void AddStudent(Student student)
         {

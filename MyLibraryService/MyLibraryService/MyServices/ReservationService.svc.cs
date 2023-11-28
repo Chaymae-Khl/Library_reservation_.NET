@@ -13,6 +13,10 @@ namespace MyLibraryService.MyServices
     {
         private LibraryMangEntities myservice = new LibraryMangEntities();
 
+        public List<Reservation> GetReservations()
+        {
+            return myservice.Reservations.ToList();
+        }
 
         public void MakeReservation(Reservation reservation)
         {

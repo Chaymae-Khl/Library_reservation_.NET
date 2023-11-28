@@ -1,0 +1,12 @@
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryService\MyLibraryService\bin\MyLibraryService.dll.config
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryService\MyLibraryService\bin\MyLibraryService.dll
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryService\MyLibraryService\bin\MyLibraryService.pdb
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryService\MyLibraryService\bin\EntityFramework.dll
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryService\MyLibraryService\bin\EntityFramework.SqlServer.dll
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryService\MyLibraryService\bin\EntityFramework.xml
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryService\MyLibraryService\bin\EntityFramework.SqlServer.xml
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryService\MyLibraryService\obj\Debug\MyLibraryService.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryService\MyLibraryService\obj\Debug\MyLibraryService.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryService\MyLibraryService\obj\Debug\MyLibraryService.csproj.CopyComplete
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryService\MyLibraryService\obj\Debug\MyLibraryService.dll
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryService\MyLibraryService\obj\Debug\MyLibraryService.pdb

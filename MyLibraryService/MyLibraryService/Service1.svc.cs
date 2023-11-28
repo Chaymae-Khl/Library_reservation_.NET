@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Web.Services.Description;
 
 namespace MyLibraryService
 {
@@ -12,6 +13,11 @@ namespace MyLibraryService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        
+        private LibraryMangEntities myservice = new LibraryMangEntities();
+
+        public List<Book> GetBooks()
+        {
+            return myservice.Books.ToList();
+        }
     }
 }

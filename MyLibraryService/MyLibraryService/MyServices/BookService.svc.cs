@@ -13,7 +13,15 @@ namespace MyLibraryService.MyServices
     // NOTE: In order to launch WCF Test Client for testing this service, please select BookService.svc or BookService.svc.cs at the Solution Explorer and start debugging.
     public class BookService : IBookService
     {
-        private LibraryMangEntities myservice=new LibraryMangEntities();
+        private LibraryMangEntities myservice;
+
+        public BookService()
+        {
+            myservice = new LibraryMangEntities();
+            myservice.Configuration.LazyLoadingEnabled = false;
+            myservice.Configuration.ProxyCreationEnabled = false;
+        }
+
         public void AddBook(Book book)
         {
             myservice.Books.Add(book);
