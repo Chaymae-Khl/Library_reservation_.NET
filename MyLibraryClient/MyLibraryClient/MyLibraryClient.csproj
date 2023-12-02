@@ -8,12 +8,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\MyUcs\download.jpg" />
+    <None Remove="Views\MyUcs\download.png" />
+    <None Remove="Views\MyUcs\images.png" />
+    <None Remove="Views\MyUcs\resv.png" />
+    <None Remove="Views\MyUcs\ser %282%29.png" />
+    <None Remove="Views\MyUcs\ser.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Prism.Core" Version="8.1.97" />
     <PackageReference Include="System.ServiceModel.Duplex" Version="4.10.*" />
     <PackageReference Include="System.ServiceModel.Federation" Version="4.10.*" />
     <PackageReference Include="System.ServiceModel.Http" Version="4.10.*" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.10.*" />
     <PackageReference Include="System.ServiceModel.Security" Version="4.10.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\MyUcs\download.jpg" />
+    <Resource Include="Views\MyUcs\download.png" />
+    <Resource Include="Views\MyUcs\images.png" />
+    <Resource Include="Views\MyUcs\resv.png" />
+    <Resource Include="Views\MyUcs\ser (2).png" />
+    <Resource Include="Views\MyUcs\ser.png" />
   </ItemGroup>
 
 </Project>

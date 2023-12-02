@@ -15,6 +15,17 @@ namespace MyLibraryClient.Business
 {
     public class StudentBusiness
     {
+        private string _searchText;
+
+        public string SearchText
+        {
+            get => _searchText;
+            set
+            {
+                _searchText = value;
+                FilterBooks();
+            }
+        }
         public ObservableCollection<Students> listOfObjects { get; set; } = new ObservableCollection<Students>();
         StudentsServiceReference.StudentServiceClient myservice = new StudentsServiceReference.StudentServiceClient();
 
@@ -23,7 +34,6 @@ namespace MyLibraryClient.Business
         public DelegateCommand AddButton { get; set; }
 
         public DelegateCommand UpdateButton { get; set; }
-        public DelegateCommand MenuButton { get; set; }
         #endregion
 
         #region Form DelegateCommand
@@ -45,7 +55,6 @@ namespace MyLibraryClient.Business
             this.deleteButton = new DelegateCommand(DeleteFunction);
             this.AddButton = new DelegateCommand(AddButtonFunction);
             this.UpdateButton = new DelegateCommand(UpdateButtonFunction);
-            this.MenuButton = new DelegateCommand(MenuButtonFunction);
             #endregion
 
             #region Instances of Form DelegateCommand
@@ -127,15 +136,6 @@ namespace MyLibraryClient.Business
                 MessageBox.Show("Please select a row to update");
         }
 
-
-        private void MenuButtonFunction()
-        {
-            MainWindow mainWindow = App.Current.MainWindow as MainWindow;
-            mainWindow.gr_content.Children.Clear();
-            MenuUC menu =new MenuUC();
-            menu.DataContext = new MenuBusiness();
-            mainWindow.gr_content.Children.Add(menu);
-        }
         #endregion
 
 
@@ -149,6 +149,35 @@ namespace MyLibraryClient.Business
             mainWindow.gr_content.Children.Add(operations);
             operations.DataContext = new StudentBusiness();
         }
+
+        private void FilterBooks()
+        {
+            if (string.IsNullOrWhiteSpace(SearchText))
+            {
+                // If the search text is empty, show all books
+                listOfObjects.Clear();
+                foreach (var students in myservice.GetStudents())
+                {
+                    listOfObjects.Add(students);
+                }
+            }
+            else
+            {
+                // Filter the books based on the search text
+                var filteredList = myservice.GetStudents()
+                    .Where(students => students.firstName.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ||
+                                   students.id.ToString().Contains(SearchText, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
+
+                listOfObjects.Clear();
+                foreach (var students in filteredList)
+                {
+                    listOfObjects.Add(students);
+                }
+            }
+        }
+
+
         #endregion
 
 

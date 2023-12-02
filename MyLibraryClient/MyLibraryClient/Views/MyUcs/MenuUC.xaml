@@ -6,10 +6,15 @@
              xmlns:local="clr-namespace:MyLibraryClient.Views.MyUcs"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#FFF4E2E2">
-        <Button Content="Manage Students" HorizontalAlignment="Left" Margin="294,78,0,0" VerticalAlignment="Top" Height="58" Width="185" FontSize="16" Command="{Binding StudentButton}"/>
-        <Button Content="Manage Books" HorizontalAlignment="Left" Margin="294,161,0,0" VerticalAlignment="Top" Height="64" Width="185" FontSize="16" Command="{Binding BookButton}"/>
-        <Button Content="Manage Reservation" HorizontalAlignment="Left" Margin="294,257,0,0" VerticalAlignment="Top" Height="57" Width="185" FontSize="16" Command="{Binding ReservationButton}"/>
+    <Grid Background="White">
+        <Button Content="Manage Students" HorizontalAlignment="Left" Margin="71,244,0,0" VerticalAlignment="Top" Height="65" Width="182" FontSize="16" Command="{Binding StudentButton}" BorderBrush="#FFF17A10" Background="#FFF0A61C" Foreground="White" />
+        <Button Content="Manage Books" HorizontalAlignment="Left" Margin="303,244,0,0" VerticalAlignment="Top" Height="65" Width="182" FontSize="16" Command="{Binding BookButton}" BorderBrush="#FFF0910F" Background="#FFF0A61C" Foreground="White"/>
+        <Button Content="Manage Reservation" HorizontalAlignment="Left" Margin="514,244,0,0" VerticalAlignment="Top" Height="65" Width="184" FontSize="16" Command="{Binding ReservationButton}" BorderBrush="#FFF0B316" Background="#FFF0A61C" Foreground="White"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="113,125,0,0" VerticalAlignment="Top" Width="100" Source="/Views/MyUcs/images.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="341,125,0,0" VerticalAlignment="Top" Width="100" Source="/Views/MyUcs/download.jpg"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="561,125,0,0" VerticalAlignment="Top" Width="100" Source="/Views/MyUcs/resv.png"/>
+        <Label Content="Menu" HorizontalAlignment="Left" Margin="343,18,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Rectangle HorizontalAlignment="Center" Height="124" Stroke="Black" VerticalAlignment="Top" Width="898" Margin="0,-33,0,0"/>
 
     </Grid>
 </UserControl>

@@ -29,8 +29,6 @@ namespace MyLibraryClient.Business
             mainWindow.gr_content.Children.Clear();
             mainWindow.gr_content.Children.Add(reservationUc);
             reservationUc.DataContext=new ReservationBusiness();
-            reservationUc.BookList.DataContext = new BookBusiness();
-            reservationUc.StudentList.DataContext = new StudentBusiness();
         }
 
         private void bookbuttonclick()

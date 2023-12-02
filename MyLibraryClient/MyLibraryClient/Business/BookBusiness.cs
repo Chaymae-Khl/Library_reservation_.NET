@@ -15,19 +15,30 @@ namespace MyLibraryClient.Business
 {
     public class BookBusiness
     {
-        BookServiceReference.BookServiceClient myservice  = new BookServiceReference.BookServiceClient();
+        BookServiceReference.BookServiceClient myservice = new BookServiceReference.BookServiceClient();
+
+        private string _searchText;
+
+        public string SearchText
+        {
+            get => _searchText;
+            set
+            {
+                _searchText = value;
+                FilterBooks();
+            }
+        }
 
         public ObservableCollection<Book> listOfObjects { get; set; } = new ObservableCollection<Book>();
         public Book selectedRow { get; set; }
          public Book book { get; set; }
 
         #region OperationsUc DelegateCommand
-        public DelegateCommand MenuButton { get; set; }
 
         public DelegateCommand deleteButton { get; set; }
         public DelegateCommand AddButton { get; set; }
-
         public DelegateCommand UpdateButton { get; set; }
+        public DelegateCommand SearchCommand { get; set; }
         #endregion
 
         #region Form DelegateCommand
@@ -46,8 +57,8 @@ namespace MyLibraryClient.Business
 
             this.deleteButton = new DelegateCommand(deleteBook);
             this.AddButton=new DelegateCommand(AddButtonFunction);
-            this.MenuButton = new DelegateCommand(MenuButtonFunction);
             this.UpdateButton = new DelegateCommand(UpdateButtonFunction);
+
             #endregion
 
             #region Instances of form DelegateCommand
@@ -59,14 +70,6 @@ namespace MyLibraryClient.Business
 
 
         #region functions of OperationsUc delegateCommand
-        private void MenuButtonFunction()
-        {
-            MainWindow mainWindow = App.Current.MainWindow as MainWindow;
-            mainWindow.gr_content.Children.Clear();
-            MenuUC menu = new MenuUC();
-            menu.DataContext = new MenuBusiness();
-            mainWindow.gr_content.Children.Add(menu);
-        }
         private void deleteBook()
         {
             if (selectedRow != null)
@@ -136,6 +139,34 @@ namespace MyLibraryClient.Business
             mainWindow.gr_content.Children.Add(operations);
             operations.DataContext = new BookBusiness();
         }
+        private void FilterBooks()
+        {
+            if (string.IsNullOrWhiteSpace(SearchText))
+            {
+                // If the search text is empty, show all books
+                listOfObjects.Clear();
+                foreach (var book in myservice.GetBooks())
+                {
+                    listOfObjects.Add(book);
+                }
+            }
+            else
+            {
+                // Filter the books based on the search text
+                var filteredList = myservice.GetBooks()
+                    .Where(book => book.title.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ||
+                                   book.author.Contains(SearchText, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
+
+                listOfObjects.Clear();
+                foreach (var book in filteredList)
+                {
+                    listOfObjects.Add(book);
+                }
+            }
+        }
+
+
         #endregion
 
 

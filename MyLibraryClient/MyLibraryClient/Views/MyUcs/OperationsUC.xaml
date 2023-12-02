@@ -18,14 +18,13 @@
                     <ColumnDefinition Width="82" />
                     <!-- Add more ColumnDefinitions as needed -->
                 </Grid.ColumnDefinitions>
-               
-        
-        <!-- Data Rows -->
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding id}" />
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding firstName}" />
-        <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding lastName}" />
-        <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding cin}" />
-        </Grid>
+
+
+                <!-- Data Rows -->
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding firstName}" />
+                <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding lastName}" />
+                <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding cin}" />
+            </Grid>
         </DataTemplate>
 
         <DataTemplate x:Key="BookDataTemplate" DataType="{x:Type MyClass:Book}">
@@ -54,17 +53,20 @@
 
 
 
-    <Grid Background="#FFEDCCCC">
-        <ListBox Margin="199,122,79,48" ItemsSource="{Binding listOfObjects}" 
-                 ItemTemplateSelector="{StaticResource ListSelector}" SelectedItem="{Binding selectedRow}" >
-                 
+    <Grid Background="#FFF9F9F9">
+        <ListBox Margin="165,122,79,27" ItemsSource="{Binding listOfObjects}" 
+                 ItemTemplateSelector="{StaticResource ListSelector}" SelectedItem="{Binding selectedRow}" Background="#FFF7F5F0" BorderBrush="Black" >
+
         </ListBox>
-        <TextBox HorizontalAlignment="Left" Margin="199,81,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="296" Height="28"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="62,139,0,0" VerticalAlignment="Top" Height="39" Width="106" Command="{Binding AddButton}"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="62,215,0,0" VerticalAlignment="Top" Height="47" Width="106" Command="{Binding deleteButton}"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="62,296,0,0" VerticalAlignment="Top" Height="41" Width="106" Command="{Binding UpdateButton}" />
-        <Label x:Name="OpsTitle"  HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" Width="232" FontSize="22" Height="50"/>
-        <Button Content="Menu" HorizontalAlignment="Left" Margin="25,26,0,0" VerticalAlignment="Top" Height="50" Width="109" Command="{Binding MenuButton}"/>
+        <TextBox HorizontalAlignment="Left"
+                 Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                 Margin="165,85,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="296" Height="28" BorderBrush="Black"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="25,142,0,0" VerticalAlignment="Top" Height="44" Width="109" Command="{Binding AddButton}" Background="White" BorderBrush="#FFEE6E0D"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="25,227,0,0" VerticalAlignment="Top" Height="53" Width="109" Command="{Binding deleteButton}" Background="White" BorderBrush="#FFFF900E"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="25,318,0,0" VerticalAlignment="Top" Height="46" Width="109" Command="{Binding UpdateButton}" Background="White" BorderBrush="#FFFF900E" />
+        <Label x:Name="OpsTitle"  HorizontalAlignment="Left" Margin="294,22,0,0" VerticalAlignment="Top" Width="232" FontSize="22" Height="50"/>
+        <local:Header HorizontalAlignment="Left" Margin="6,19,0,0" VerticalAlignment="Top" Width="728"/>
+        <Image HorizontalAlignment="Left" Height="30" Margin="466,86,0,0" VerticalAlignment="Top" Width="20" Source="/Views/MyUcs/ser (2).png"/>
 
     </Grid>
 </UserControl>

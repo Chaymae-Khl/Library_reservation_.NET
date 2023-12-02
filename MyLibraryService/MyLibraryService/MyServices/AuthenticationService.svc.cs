@@ -18,10 +18,10 @@ namespace MyLibraryService.MyServices
             throw new NotImplementedException();
         }
 
-        public bool Login(string login, string password)
+        public Administrator Login(string login, string password)
         {
-            myservice.Administrators.Where(s => s.ad_login == login && s.ad_password == password).FirstOrDefault();
-            return true;
+           Administrator users= myservice.Administrators.Where(s => s.ad_login == login && s.ad_password == password).FirstOrDefault();
+            return users;
         }
 
         public void register(Administrator admin)

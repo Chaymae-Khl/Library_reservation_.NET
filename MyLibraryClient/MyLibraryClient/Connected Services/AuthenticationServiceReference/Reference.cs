@@ -85,10 +85,10 @@ namespace AuthenticationServiceReference
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/Login", ReplyAction="http://tempuri.org/IAuthenticationService/LoginResponse")]
-        bool Login([System.ServiceModel.MessageParameterAttribute(Name="login")] string login1, string password);
+        AuthenticationServiceReference.Administrator Login([System.ServiceModel.MessageParameterAttribute(Name="login")] string login1, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/Login", ReplyAction="http://tempuri.org/IAuthenticationService/LoginResponse")]
-        System.Threading.Tasks.Task<bool> LoginAsync(string login, string password);
+        System.Threading.Tasks.Task<AuthenticationServiceReference.Administrator> LoginAsync(string login, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/GetName", ReplyAction="http://tempuri.org/IAuthenticationService/GetNameResponse")]
         string GetName(int id);
@@ -153,12 +153,12 @@ namespace AuthenticationServiceReference
         {
         }
         
-        public bool Login(string login1, string password)
+        public AuthenticationServiceReference.Administrator Login(string login1, string password)
         {
             return base.Channel.Login(login1, password);
         }
         
-        public System.Threading.Tasks.Task<bool> LoginAsync(string login, string password)
+        public System.Threading.Tasks.Task<AuthenticationServiceReference.Administrator> LoginAsync(string login, string password)
         {
             return base.Channel.LoginAsync(login, password);
         }

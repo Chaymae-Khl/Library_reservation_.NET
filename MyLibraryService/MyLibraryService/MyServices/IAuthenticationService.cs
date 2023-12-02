@@ -12,7 +12,7 @@ namespace MyLibraryService.MyServices
     public interface IAuthenticationService
     {
         [OperationContract]
-        bool Login(string login, string password);
+        Administrator Login(string login, string password);
 
         [OperationContract]
         String GetName(int id);

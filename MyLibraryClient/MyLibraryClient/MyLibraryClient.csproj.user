@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\MyUcs\Header.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\MyUcs\LoginUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +31,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MyUcs\Header.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MyUcs\LoginUC.xaml">

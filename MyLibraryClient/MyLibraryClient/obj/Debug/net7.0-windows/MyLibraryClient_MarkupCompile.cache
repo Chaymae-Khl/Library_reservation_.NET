@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryClient\MyLibraryClient\App.xaml
-7-925377393
+8-73244489
 
-19130859887
+20-1027012557
 2131996299363
-Views\MainWindow.xaml;Views\MyUcs\LoginUC.xaml;Views\MyUcs\MenuUC.xaml;Views\MyUcs\MyForms\BookForm.xaml;Views\MyUcs\MyForms\StudentForm.xaml;Views\MyUcs\OperationsUC.xaml;Views\MyUcs\ReservationUc.xaml;
+Views\MainWindow.xaml;Views\MyUcs\header.xaml;Views\MyUcs\LoginUC.xaml;Views\MyUcs\MenuUC.xaml;Views\MyUcs\MyForms\BookForm.xaml;Views\MyUcs\MyForms\StudentForm.xaml;Views\MyUcs\OperationsUC.xaml;Views\MyUcs\ReservationUc.xaml;
 
 False
 
