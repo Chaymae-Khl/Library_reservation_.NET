@@ -15,10 +15,10 @@ namespace MyLibraryClient.Business
 {
     public class BookBusiness
     {
+
+        #region Propreties
         BookServiceReference.BookServiceClient myservice = new BookServiceReference.BookServiceClient();
-
         private string _searchText;
-
         public string SearchText
         {
             get => _searchText;
@@ -28,10 +28,11 @@ namespace MyLibraryClient.Business
                 FilterBooks();
             }
         }
-
         public ObservableCollection<Book> listOfObjects { get; set; } = new ObservableCollection<Book>();
         public Book selectedRow { get; set; }
-         public Book book { get; set; }
+        public Book book { get; set; }
+        #endregion
+
 
         #region OperationsUc DelegateCommand
 
@@ -47,7 +48,7 @@ namespace MyLibraryClient.Business
         #endregion
 
 
-
+        #region Constrictor
         public BookBusiness()
         {
             this.listOfObjects= myservice.GetBooks();
@@ -65,9 +66,8 @@ namespace MyLibraryClient.Business
             this.AddUpdateBook = new DelegateCommand(AddUpdateFunction);
             this.ManageStudentButton = new DelegateCommand(ManageStudentButtonFunction);
             #endregion
-
         }
-
+        #endregion
 
         #region functions of OperationsUc delegateCommand
         private void deleteBook()
@@ -166,10 +166,7 @@ namespace MyLibraryClient.Business
             }
         }
 
-
         #endregion
-
-
 
     }
 }

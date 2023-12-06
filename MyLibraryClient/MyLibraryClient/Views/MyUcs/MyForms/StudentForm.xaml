@@ -12,17 +12,27 @@
 
         <Rectangle HorizontalAlignment="Left" Height="210" Margin="252,90,0,0" Stroke="#FFFD9D04" VerticalAlignment="Top" Width="418"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="422,138,0,0" TextWrapping="Wrap" Text="{Binding students.cin}" VerticalAlignment="Top" Width="120" Height="22"/>
+        <TextBox HorizontalAlignment="Left" Margin="422,138,0,0" TextWrapping="Wrap" Text="{Binding students.cin}" VerticalAlignment="Top" Width="120" Height="25"/>
         <TextBox HorizontalAlignment="Left" Margin="422,170,0,0" TextWrapping="Wrap" Text="{Binding students.firstName}" VerticalAlignment="Top" Width="120" Height="25"/>
-        <TextBox HorizontalAlignment="Left" Margin="422,206,0,0" TextWrapping="Wrap" Text="{Binding students.lastName}" VerticalAlignment="Top" Width="120" Height="22"/>
-        <Label Content="Fist Name" HorizontalAlignment="Left" Margin="350,165,0,0" VerticalAlignment="Top"/>
-        <Label Content="Last Name" HorizontalAlignment="Left" Margin="348,198,0,0" VerticalAlignment="Top"/>
-        <Label Content="Cin" HorizontalAlignment="Left" Margin="352,134,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="422,206,0,0" TextWrapping="Wrap" Text="{Binding students.lastName}" VerticalAlignment="Top" Width="120" Height="25"/>
+        <Label Content="Fist Name" HorizontalAlignment="Left" Margin="348,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="348,203,0,0" VerticalAlignment="Top"/>
+        <Label Content="Cin" HorizontalAlignment="Left" Margin="348,134,0,0" VerticalAlignment="Top"/>
         <Button Content="Confirm" HorizontalAlignment="Left" Margin="462,242,0,0" VerticalAlignment="Top" Height="29" Width="80" Command="{Binding AddUpdateStudent}" Background="#FFFF8C04" Foreground="White" BorderBrush="{x:Null}"/>
         <Label x:Name="labelContent"  HorizontalAlignment="Left" Margin="400,29,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFF99C1C" FontSize="24"/>
         <Button Content="Manage Students" HorizontalAlignment="Left" Margin="26,85,0,0" VerticalAlignment="Top" Height="38" Width="119" Command="{Binding ManageStudentButton}" Background="#FF0C0B0B" Foreground="White"/>
 
         <MyUcs:Header HorizontalAlignment="Left" Margin="4,12,0,0" VerticalAlignment="Top" Width="768"/>
+        <Grid HorizontalAlignment="Left" Height="39" Margin="655,284,0,0" VerticalAlignment="Top" Width="37">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="12*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle HorizontalAlignment="Left" Height="16" Margin="22,22,0,0" Stroke="Black" VerticalAlignment="Top" Width="15" Grid.ColumnSpan="2"/>
+            <Rectangle HorizontalAlignment="Left" Height="16" Margin="0,23,0,0" Stroke="Black" VerticalAlignment="Top" Width="15"/>
+            <Rectangle HorizontalAlignment="Left" Height="16" Margin="22,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="15" Grid.ColumnSpan="2"/>
+
+        </Grid>
 
     </Grid>
 </UserControl>

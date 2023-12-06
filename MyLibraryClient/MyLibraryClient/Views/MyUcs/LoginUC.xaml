@@ -6,15 +6,137 @@
              xmlns:local="clr-namespace:MyLibraryClient.Views.MyUcs"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="White" Margin="10,0,0,0">
-        <TextBox HorizontalAlignment="Left" Margin="342,109,0,0" Text="{Binding administrator.ad_login}" TextWrapping="Wrap"  VerticalAlignment="Top" Width="185" Height="26"/>
-        <TextBox HorizontalAlignment="Left" Margin="343,159,0,0" Text="{Binding administrator.ad_password}" TextWrapping="Wrap"  VerticalAlignment="Top" Width="184" Height="26"/>
-        <Label Content="Login" HorizontalAlignment="Left" Margin="264,105,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="261,155,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Button Content="Confirm" HorizontalAlignment="Left" Margin="435,205,0,0" VerticalAlignment="Top" Height="29" Width="90" Command="{Binding LoginCommand}" Background="#FFF6A536" Foreground="#FFFAF5F5" BorderBrush="White"/>
-        <Label Content="LOGIN PAGE" HorizontalAlignment="Left" Margin="296,33,0,0" VerticalAlignment="Top" FontSize="22" RenderTransformOrigin="0.435,0.525"/>
-        <Rectangle HorizontalAlignment="Left" Height="151" Margin="71,85,0,0" Stroke="Black" VerticalAlignment="Top" Width="180"/>
-        <Image HorizontalAlignment="Left" Height="127" Margin="105,101,0,0" VerticalAlignment="Top" Width="112" Source="/Views/MyUcs/download.png" OpacityMask="#FFE61212"/>
+    <Grid Background="White" Margin="10,0,0,10">
+        <TextBox HorizontalAlignment="Left" Margin="275,154,0,0" Text="{Binding administrator.ad_login}" TextWrapping="Wrap"  VerticalAlignment="Top" Width="185" Height="27"/>
+        <TextBox HorizontalAlignment="Left" Margin="274,221,0,0" Text="{Binding administrator.ad_password}" TextWrapping="Wrap"  VerticalAlignment="Top" Width="184" Height="27"/>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="274,118,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="270,190,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button Content="Confirm" HorizontalAlignment="Left" Margin="369,268,0,0" VerticalAlignment="Top" Height="29" Width="90" Command="{Binding LoginCommand}" Background="#FFF6A536" Foreground="#FFFAF5F5" BorderBrush="White"/>
+        <Label Content="LOGIN PAGE" HorizontalAlignment="Left" Margin="216,53,0,0" VerticalAlignment="Top" FontSize="22" RenderTransformOrigin="0.435,0.525"/>
+        <Rectangle HorizontalAlignment="Left" Height="180" Margin="81,115,0,0" Stroke="Black" VerticalAlignment="Top" Width="180"/>
+        <Image HorizontalAlignment="Left" Height="141" Margin="112,137,0,0" VerticalAlignment="Top" Width="129" Source="/Views/MyUcs/download.png" OpacityMask="#FFE61212"/>
+        <Grid HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="178" Margin="-47,180,0,0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.806"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Rectangle HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="26" Fill="#FFF3A438" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1.207"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="25" Margin="39,18,0,0" VerticalAlignment="Top" Width="26" Fill="#FFF3A438" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1.207"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="26" Fill="#FFF3A438" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.568"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="25" Margin="117,20,0,0" VerticalAlignment="Top" Width="26" Fill="#FFF3A438" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1.207"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="25" Margin="152,1,0,0" VerticalAlignment="Top" Width="26" Fill="#FFF3A438" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1.207"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="178" Margin="85,306,0,0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.971"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Rectangle HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="26" Fill="#FF1A1918" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1.207"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="25" Margin="39,18,0,0" VerticalAlignment="Top" Width="26" Fill="#FF0F0F0F" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1.207"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="26" Fill="#FF111110" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.568"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="25" Margin="117,20,0,0" VerticalAlignment="Top" Width="26" Fill="#FF141413" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1.207"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="25" Margin="152,1,0,0" VerticalAlignment="Top" Width="26" Fill="#FF0F0F0F" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1.207"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
+        </Grid>
 
     </Grid>
 </UserControl>

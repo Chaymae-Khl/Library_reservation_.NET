@@ -13,7 +13,6 @@
     <None Remove="Views\MyUcs\images.png" />
     <None Remove="Views\MyUcs\resv.png" />
     <None Remove="Views\MyUcs\ser %282%29.png" />
-    <None Remove="Views\MyUcs\ser.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,7 +30,6 @@
     <Resource Include="Views\MyUcs\images.png" />
     <Resource Include="Views\MyUcs\resv.png" />
     <Resource Include="Views\MyUcs\ser (2).png" />
-    <Resource Include="Views\MyUcs\ser.png" />
   </ItemGroup>
 
 </Project>

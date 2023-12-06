@@ -14,14 +14,15 @@ namespace MyLibraryClient.Business
 {
     public class AuthenticationBusiness
     {
-
+        #region Propreties
         public DelegateCommand LoginCommand { get; set; }
         public DelegateCommand LogoutCommand { get; set; }
         public Administrator administrator { get; set; }
         public DelegateCommand MenuButton { get; set; }
-
         AuthenticationServiceReference.AuthenticationServiceClient myservice = new AuthenticationServiceReference.AuthenticationServiceClient();
+        #endregion
 
+        #region Constrictor
         public AuthenticationBusiness()
         {
             this.administrator = new Administrator();
@@ -30,6 +31,9 @@ namespace MyLibraryClient.Business
             this.MenuButton = new DelegateCommand(MenuButtonFunction);
 
         }
+        #endregion
+
+        #region DelegateCommand functions
         private void MenuButtonFunction()
         {
             MainWindow mainWindow = App.Current.MainWindow as MainWindow;
@@ -59,5 +63,6 @@ namespace MyLibraryClient.Business
                 MessageBox.Show("Login or password Incorrect");
             }
         }
+        #endregion
     }
 }

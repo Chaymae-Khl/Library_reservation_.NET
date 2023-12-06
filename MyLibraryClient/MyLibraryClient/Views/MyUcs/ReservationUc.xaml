@@ -87,6 +87,7 @@
         <Button Content="Delete" HorizontalAlignment="Left" Margin="506,263,0,0" VerticalAlignment="Top" Height="33" Width="83" Command="{Binding removeReservation}" FontSize="14" Background="#FFFF9435" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.21,0.375"/>
         <local:Header HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="764"/>
         <Label Content="Manage Reservations" HorizontalAlignment="Left" Margin="267,18,0,0" VerticalAlignment="Top" Height="64" Width="256" FontSize="24"/>
+        <Rectangle HorizontalAlignment="Left" Height="525" Stroke="Black" VerticalAlignment="Top" Width="129" Margin="0,-24,0,0"/>
 
     </Grid>
 </UserControl>

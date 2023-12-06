@@ -13,16 +13,26 @@
         <Rectangle HorizontalAlignment="Left" Height="202" Margin="215,87,0,0" Stroke="#FFFD9D04" VerticalAlignment="Top" Width="376"/>
 
         <TextBox HorizontalAlignment="Left" Margin="366,125,0,0" TextWrapping="Wrap" Text="{Binding book.author}" VerticalAlignment="Top" Width="137" Height="26"/>
-        <TextBox HorizontalAlignment="Left" Margin="366,161,0,0" TextWrapping="Wrap" Text="{Binding book.title}" VerticalAlignment="Top" Width="137" Height="25"/>
-        <TextBox HorizontalAlignment="Left" Margin="366,200,0,0" TextWrapping="Wrap" Text="{Binding book.price}" VerticalAlignment="Top" Width="137" Height="25"/>
-        <Label Content="Title" HorizontalAlignment="Left" Margin="286,160,0,0" VerticalAlignment="Top"/>
-        <Label Content="Price" HorizontalAlignment="Left" Margin="286,199,0,0" VerticalAlignment="Top"/>
-        <Label Content="Author" HorizontalAlignment="Left" Margin="286,125,0,0" VerticalAlignment="Top"/>
-        <Button Content="Confirm" HorizontalAlignment="Left" Margin="417,241,0,0" VerticalAlignment="Top" Height="32" Width="83" Command="{Binding AddUpdateBook}" RenderTransformOrigin="0.482,1.508" Background="#FFFF8C04" Foreground="White" BorderBrush="{x:Null}"/>
+        <TextBox HorizontalAlignment="Left" Margin="366,161,0,0" TextWrapping="Wrap" Text="{Binding book.title}" VerticalAlignment="Top" Width="137" Height="26"/>
+        <TextBox HorizontalAlignment="Left" Margin="366,200,0,0" TextWrapping="Wrap" Text="{Binding book.price}" VerticalAlignment="Top" Width="137" Height="26"/>
+        <Label Content="Title" HorizontalAlignment="Left" Margin="287,159,0,0" VerticalAlignment="Top"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="288,198,0,0" VerticalAlignment="Top"/>
+        <Label Content="Author" HorizontalAlignment="Left" Margin="286,122,0,0" VerticalAlignment="Top"/>
+        <Button Content="Confirm" HorizontalAlignment="Left" Margin="419,241,0,0" VerticalAlignment="Top" Height="32" Width="83" Command="{Binding AddUpdateBook}" RenderTransformOrigin="0.482,1.508" Background="#FFFF8C04" Foreground="White" BorderBrush="{x:Null}"/>
         <Label x:Name="labelContent"  HorizontalAlignment="Left" Margin="351,31,0,0" VerticalAlignment="Top" Foreground="#FFFD9C00" FontSize="24"/>
         <Button Content="Manage Books" HorizontalAlignment="Left" Margin="28,82,0,0" VerticalAlignment="Top" Height="38" Width="119" Command="{Binding ManageStudentButton}" RenderTransformOrigin="0.5,1.281" Foreground="White" Background="Black"/>
 
         <MyUcs:Header HorizontalAlignment="Left" Margin="6,16,0,0" VerticalAlignment="Top" Width="762"/>
+        <Grid HorizontalAlignment="Left" Height="39" Margin="574,271,0,0" VerticalAlignment="Top" Width="37">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="12*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle HorizontalAlignment="Left" Height="16" Margin="22,22,0,0" Stroke="Black" VerticalAlignment="Top" Width="15" Grid.ColumnSpan="2"/>
+            <Rectangle HorizontalAlignment="Left" Height="16" Margin="0,23,0,0" Stroke="Black" VerticalAlignment="Top" Width="15"/>
+            <Rectangle HorizontalAlignment="Left" Height="16" Margin="22,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="15" Grid.ColumnSpan="2"/>
+
+        </Grid>
 
     </Grid>
 </UserControl>

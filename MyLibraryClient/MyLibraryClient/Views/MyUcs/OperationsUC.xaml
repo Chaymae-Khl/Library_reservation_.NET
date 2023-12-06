@@ -12,15 +12,16 @@
         <DataTemplate x:Key="StudentDataTemplate" DataType="{x:Type MyClass:Students}">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="22" />
-                    <ColumnDefinition Width="82" />
-                    <ColumnDefinition Width="82" />
-                    <ColumnDefinition Width="82" />
+                    <ColumnDefinition x:Name="name" Width="55" />
+                    <ColumnDefinition Width="171" />
+                    <ColumnDefinition Width="171" />
+                    <ColumnDefinition Width="171" />
                     <!-- Add more ColumnDefinitions as needed -->
                 </Grid.ColumnDefinitions>
 
 
                 <!-- Data Rows -->
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding id}"/>
                 <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding firstName}" />
                 <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding lastName}" />
                 <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding cin}" />
@@ -30,10 +31,10 @@
         <DataTemplate x:Key="BookDataTemplate" DataType="{x:Type MyClass:Book}">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="22" />
-                    <ColumnDefinition Width="111" />
-                    <ColumnDefinition Width="111" />
-                    <ColumnDefinition Width="111" />
+                    <ColumnDefinition Width="55" />
+                    <ColumnDefinition Width="171" />
+                    <ColumnDefinition Width="171" />
+                    <ColumnDefinition Width="171" />
                     <!-- Add more ColumnDefinitions as needed -->
                 </Grid.ColumnDefinitions>
 
@@ -54,7 +55,7 @@
 
 
     <Grid Background="#FFF9F9F9">
-        <ListBox Margin="165,122,79,27" ItemsSource="{Binding listOfObjects}" 
+        <ListBox Margin="165,122,64,27" ItemsSource="{Binding listOfObjects}" 
                  ItemTemplateSelector="{StaticResource ListSelector}" SelectedItem="{Binding selectedRow}" Background="#FFF7F5F0" BorderBrush="Black" >
 
         </ListBox>
@@ -65,8 +66,69 @@
         <Button Content="Delete" HorizontalAlignment="Left" Margin="25,227,0,0" VerticalAlignment="Top" Height="53" Width="109" Command="{Binding deleteButton}" Background="White" BorderBrush="#FFFF900E"/>
         <Button Content="Update" HorizontalAlignment="Left" Margin="25,318,0,0" VerticalAlignment="Top" Height="46" Width="109" Command="{Binding UpdateButton}" Background="White" BorderBrush="#FFFF900E" />
         <Label x:Name="OpsTitle"  HorizontalAlignment="Left" Margin="294,22,0,0" VerticalAlignment="Top" Width="232" FontSize="22" Height="50"/>
-        <local:Header HorizontalAlignment="Left" Margin="6,19,0,0" VerticalAlignment="Top" Width="728"/>
+        <local:Header HorizontalAlignment="Left" Margin="8,27,0,0" VerticalAlignment="Top" Width="728"/>
         <Image HorizontalAlignment="Left" Height="30" Margin="466,86,0,0" VerticalAlignment="Top" Width="20" Source="/Views/MyUcs/ser (2).png"/>
+        <Grid HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="178" Margin="687,69,0,0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.806"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Rectangle HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="26" Fill="#FFF3A438" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1.207"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="25" Margin="39,18,0,0" VerticalAlignment="Top" Width="26" Fill="#FFF3A438" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1.207"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="26" Fill="#FFF3A438" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.568"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="25" Margin="117,20,0,0" VerticalAlignment="Top" Width="26" Fill="#FFF3A438" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1.207"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="25" Margin="152,1,0,0" VerticalAlignment="Top" Width="26" Fill="#FFF3A438" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1.207"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
+        </Grid>
 
     </Grid>
 </UserControl>

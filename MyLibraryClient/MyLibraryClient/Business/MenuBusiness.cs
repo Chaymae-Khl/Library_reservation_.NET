@@ -10,18 +10,28 @@ namespace MyLibraryClient.Business
 {
     class MenuBusiness
     {
+
+        #region  Menu DelegateCommand
+
         public DelegateCommand StudentButton { get; set; }
         public DelegateCommand BookButton { get; set; }
-
         public DelegateCommand ReservationButton { get; set; }
 
+        #endregion
+
+        #region Constrictor
         public MenuBusiness()
         {
             StudentButton = new DelegateCommand(studentbuttonclick);
             BookButton = new DelegateCommand(bookbuttonclick);
             ReservationButton = new DelegateCommand(reservationButtonclick);
         }
+        #endregion
 
+
+
+
+        #region DelegateCommand Functions
         private void reservationButtonclick()
         {
             MainWindow mainWindow=App.Current.MainWindow as MainWindow;
@@ -50,6 +60,7 @@ namespace MyLibraryClient.Business
             mainWindow.gr_content.Children.Add(opsUC);
             opsUC.DataContext = new StudentBusiness();
         }
+        #endregion
     }
 
 

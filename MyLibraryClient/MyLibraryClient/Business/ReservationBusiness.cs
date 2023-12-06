@@ -12,31 +12,44 @@ namespace MyLibraryClient.Business
 {
     internal class ReservationBusiness
     {
-        public ObservableCollection<Reservation> ListOfReservations { get; set; }
+        #region Propreties
 
+        public ObservableCollection<Reservation> ListOfReservations { get; set; }
+        public Reservation newReservation { get; set; }
+        public Reservation selectedRow { get; set; }
         ReservationsServiceReference.ReservationServiceClient myservice= new ReservationsServiceReference.ReservationServiceClient();
-        
+       
+        #endregion
+
+        #region Reservation DelegateCOmmand
+
         public DelegateCommand makeReservation {  get; set; }
-       public DelegateCommand removeReservation { get; set; }
-       public Reservation newReservation { get; set; }
-      
-       public Reservation selectedRow { get; set; }
+        public DelegateCommand removeReservation { get; set; }
+
+        #endregion
+
+
+        #region Constrictor
+
         public ReservationBusiness()
         {
             this.ListOfReservations=myservice.GetReservations();
-           
             this.newReservation=new Reservation();
             this.makeReservation = new DelegateCommand(makeReservationFunc);
             this.removeReservation = new DelegateCommand(removeReservationFunction);
         }
 
+        #endregion
+
+
+        #region DelegateCommand functions
         private void removeReservationFunction()
         {
             if (selectedRow != null)
             {
                 myservice.RemoveReservation(selectedRow.id);
-                ListOfReservations.Remove(selectedRow);
                 MessageBox.Show("Reservation Removed");
+                ListOfReservations.Remove(selectedRow);
 
             }
             else
@@ -51,5 +64,7 @@ namespace MyLibraryClient.Business
             ListOfReservations.Add(newReservation);
             MessageBox.Show("Reservation Added succesfly");
         }
+
+        #endregion
     }
 }

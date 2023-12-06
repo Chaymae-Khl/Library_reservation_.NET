@@ -15,6 +15,8 @@ namespace MyLibraryClient.Business
 {
     public class StudentBusiness
     {
+
+        #region Propreties
         private string _searchText;
 
         public string SearchText
@@ -28,6 +30,11 @@ namespace MyLibraryClient.Business
         }
         public ObservableCollection<Students> listOfObjects { get; set; } = new ObservableCollection<Students>();
         StudentsServiceReference.StudentServiceClient myservice = new StudentsServiceReference.StudentServiceClient();
+        public Students selectedRow { get; set; }
+        public Students students { get; set; }
+        #endregion
+
+
 
         #region OperationsUc DelegateCommand
         public DelegateCommand deleteButton { get; set; }
@@ -44,8 +51,7 @@ namespace MyLibraryClient.Business
         #endregion
 
 
-        public Students selectedRow { get; set; }
-        public Students students { get; set; }
+        #region Constrictor
         public StudentBusiness()
         {
             this.listOfObjects=myservice.GetStudents();
@@ -62,7 +68,7 @@ namespace MyLibraryClient.Business
             this.AddUpdateStudent = new DelegateCommand(addUpdateStd);
             #endregion
         }
-
+        #endregion
 
         #region function of Form delagateCommand
 
