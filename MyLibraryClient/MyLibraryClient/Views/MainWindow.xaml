@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid x:Name="gr_content">
-        <MyUcs:LoginUC HorizontalAlignment="Left" VerticalAlignment="Top" Height="385" Width="583" Margin="122,10,0,0"/>
+        <MyUcs:LoginUC HorizontalAlignment="Left" VerticalAlignment="Top" Height="414" Width="780" Margin="2,0,0,0"/>
     </Grid>
 </Window>

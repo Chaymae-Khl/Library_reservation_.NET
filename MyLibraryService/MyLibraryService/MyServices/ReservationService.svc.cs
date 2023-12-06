@@ -22,9 +22,30 @@ namespace MyLibraryService.MyServices
 
         }
 
-        public List<Reservation> GetReservations()
+        public List<ReservationInfo> GetReservations()
         {
-            return myservice.Reservations.ToList();
+            using (var context = new LibraryMangEntities()) // Replace YourDbContext with the actual name of your DbContext
+            {
+                // Retrieve reservations from the database including related entities
+                var reservations = context.Reservations
+                    .Include(r => r.Book)
+                    .Include(r => r.Student)
+                    .ToList();
+
+                // Project the data into ReservationInfo
+                var reservationInfoList = reservations.Select(r => new ReservationInfo
+                {
+                    ReservationId = r.id,
+                    StudentId = r.id_Student ?? 0,
+                    StudentFirstName = r.Student?.firstName, // Assuming Student has a FirstName property
+                    BookId = r.id_Book ?? 0,
+                    BookTitle = r.Book?.title, // Assuming Book has a Title property
+                    DateOfReservation = r.dateOfReserv
+                }).ToList();
+
+                return reservationInfoList;
+            }
+            //return myservice.Reservations.ToList();
         }
 
        

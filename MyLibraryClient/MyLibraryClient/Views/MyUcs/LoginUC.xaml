@@ -7,15 +7,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White" Margin="10,0,0,10">
-        <TextBox HorizontalAlignment="Left" Margin="275,154,0,0" Text="{Binding administrator.ad_login}" TextWrapping="Wrap"  VerticalAlignment="Top" Width="185" Height="27"/>
-        <TextBox HorizontalAlignment="Left" Margin="274,221,0,0" Text="{Binding administrator.ad_password}" TextWrapping="Wrap"  VerticalAlignment="Top" Width="184" Height="27"/>
-        <Label Content="Login" HorizontalAlignment="Left" Margin="274,118,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="270,190,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Button Content="Confirm" HorizontalAlignment="Left" Margin="369,268,0,0" VerticalAlignment="Top" Height="29" Width="90" Command="{Binding LoginCommand}" Background="#FFF6A536" Foreground="#FFFAF5F5" BorderBrush="White"/>
-        <Label Content="LOGIN PAGE" HorizontalAlignment="Left" Margin="216,53,0,0" VerticalAlignment="Top" FontSize="22" RenderTransformOrigin="0.435,0.525"/>
-        <Rectangle HorizontalAlignment="Left" Height="180" Margin="81,115,0,0" Stroke="Black" VerticalAlignment="Top" Width="180"/>
-        <Image HorizontalAlignment="Left" Height="141" Margin="112,137,0,0" VerticalAlignment="Top" Width="129" Source="/Views/MyUcs/download.png" OpacityMask="#FFE61212"/>
-        <Grid HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="178" Margin="-47,180,0,0" RenderTransformOrigin="0.5,0.5">
+        <TextBox HorizontalAlignment="Left" Margin="416,160,0,0" Text="{Binding administrator.ad_login}" TextWrapping="Wrap"  VerticalAlignment="Top" Width="185" Height="27"/>
+        <TextBox HorizontalAlignment="Left" Margin="415,227,0,0" Text="{Binding administrator.ad_password}" TextWrapping="Wrap"  VerticalAlignment="Top" Width="184" Height="27"/>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="415,124,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="411,196,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button Content="Confirm" HorizontalAlignment="Left" Margin="510,274,0,0" VerticalAlignment="Top" Height="29" Width="90" Command="{Binding LoginCommand}" Background="#FFF6A536" Foreground="#FFFAF5F5" BorderBrush="White"/>
+        <Label Content="LOGIN PAGE" HorizontalAlignment="Left" Margin="357,59,0,0" VerticalAlignment="Top" FontSize="22" RenderTransformOrigin="0.435,0.525"/>
+        <Rectangle HorizontalAlignment="Left" Height="180" Margin="222,121,0,0" Stroke="Black" VerticalAlignment="Top" Width="180"/>
+        <Image HorizontalAlignment="Left" Height="141" Margin="253,143,0,0" VerticalAlignment="Top" Width="129" Source="/Views/MyUcs/download.png" OpacityMask="#FFE61212"/>
+        <Grid HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="178" Margin="94,186,0,0" RenderTransformOrigin="0.5,0.5">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -76,7 +76,7 @@
             </Rectangle>
 
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="178" Margin="85,306,0,0" RenderTransformOrigin="0.5,0.5">
+        <Grid HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="178" Margin="226,312,0,0" RenderTransformOrigin="0.5,0.5">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

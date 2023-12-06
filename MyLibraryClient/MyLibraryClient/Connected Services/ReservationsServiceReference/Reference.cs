@@ -273,6 +273,103 @@ namespace ReservationsServiceReference
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ReservationInfo", Namespace="http://schemas.datacontract.org/2004/07/MyLibraryService.MyServices")]
+    public partial class ReservationInfo : object
+    {
+        
+        private int BookIdField;
+        
+        private string BookTitleField;
+        
+        private System.Nullable<System.DateTime> DateOfReservationField;
+        
+        private int ReservationIdField;
+        
+        private string StudentFirstNameField;
+        
+        private int StudentIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BookId
+        {
+            get
+            {
+                return this.BookIdField;
+            }
+            set
+            {
+                this.BookIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BookTitle
+        {
+            get
+            {
+                return this.BookTitleField;
+            }
+            set
+            {
+                this.BookTitleField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> DateOfReservation
+        {
+            get
+            {
+                return this.DateOfReservationField;
+            }
+            set
+            {
+                this.DateOfReservationField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ReservationId
+        {
+            get
+            {
+                return this.ReservationIdField;
+            }
+            set
+            {
+                this.ReservationIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StudentFirstName
+        {
+            get
+            {
+                return this.StudentFirstNameField;
+            }
+            set
+            {
+                this.StudentFirstNameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int StudentId
+        {
+            get
+            {
+                return this.StudentIdField;
+            }
+            set
+            {
+                this.StudentIdField = value;
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ReservationsServiceReference.IReservationService")]
     public interface IReservationService
@@ -291,10 +388,10 @@ namespace ReservationsServiceReference
         System.Threading.Tasks.Task RemoveReservationAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReservationService/GetReservations", ReplyAction="http://tempuri.org/IReservationService/GetReservationsResponse")]
-        System.Collections.ObjectModel.ObservableCollection<ReservationsServiceReference.Reservation> GetReservations();
+        System.Collections.ObjectModel.ObservableCollection<ReservationsServiceReference.ReservationInfo> GetReservations();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReservationService/GetReservations", ReplyAction="http://tempuri.org/IReservationService/GetReservationsResponse")]
-        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<ReservationsServiceReference.Reservation>> GetReservationsAsync();
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<ReservationsServiceReference.ReservationInfo>> GetReservationsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -367,12 +464,12 @@ namespace ReservationsServiceReference
             return base.Channel.RemoveReservationAsync(id);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<ReservationsServiceReference.Reservation> GetReservations()
+        public System.Collections.ObjectModel.ObservableCollection<ReservationsServiceReference.ReservationInfo> GetReservations()
         {
             return base.Channel.GetReservations();
         }
         
-        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<ReservationsServiceReference.Reservation>> GetReservationsAsync()
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<ReservationsServiceReference.ReservationInfo>> GetReservationsAsync()
         {
             return base.Channel.GetReservationsAsync();
         }

@@ -77,3 +77,5 @@ C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryClient\MyLibraryClient\obj\Debug
 C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryClient\MyLibraryClient\obj\Debug\net7.0-windows\Views\MyUcs\ReservationUc.baml
 C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryClient\MyLibraryClient\obj\Debug\net7.0-windows\Views\MyUcs\Header.g.cs
 C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryClient\MyLibraryClient\obj\Debug\net7.0-windows\Views\MyUcs\Header.baml
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryClient\MyLibraryClient\obj\Debug\net7.0-windows\Views\ReservationList.g.cs
+C:\Users\hp\Desktop\5GI\.net\.NET(CC1)\MyLibraryClient\MyLibraryClient\obj\Debug\net7.0-windows\Views\ReservationList.baml

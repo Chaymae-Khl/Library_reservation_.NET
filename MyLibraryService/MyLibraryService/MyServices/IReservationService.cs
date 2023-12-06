@@ -19,7 +19,7 @@ namespace MyLibraryService.MyServices
 
         [OperationContract]
 
-        List<Reservation> GetReservations();
+        List<ReservationInfo> GetReservations();
 
        
     }

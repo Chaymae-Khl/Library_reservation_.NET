@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:MyLibraryClient.Views.MyUcs"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="#FFF9F7AC">
-    <Grid Background="White">
-        <Rectangle HorizontalAlignment="Left" Height="173" Margin="200,75,0,0" Stroke="#FFFF9435" VerticalAlignment="Top" Width="389" RenderTransformOrigin="0.5,0.5">
+    <Grid x:Name="gr_reservation" Background="White">
+        <Rectangle HorizontalAlignment="Center" Height="214" Margin="0,85,0,0" Stroke="#FFFF9435" VerticalAlignment="Top" Width="389" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,7 +18,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
 
-        <TextBox HorizontalAlignment="Left" Text="{Binding newReservation.id_Student}" Margin="358,91,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="168" Height="27" RenderTransformOrigin="0.5,0.5">
+        <TextBox HorizontalAlignment="Left" Text="{Binding newReservation.id_Student}" Margin="363,122,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="168" Height="27" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -28,7 +28,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Text="{Binding newReservation.id_Book}" Margin="361,148,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="170" Height="27" RenderTransformOrigin="0.5,0.5">
+        <TextBox HorizontalAlignment="Left" Text="{Binding newReservation.id_Book}" Margin="362,195,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="170" Height="27" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -38,7 +38,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button Content="Resserve" HorizontalAlignment="Left" Margin="431,203,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.044,0.419" Height="35" Width="97" Command="{Binding makeReservation}" FontSize="14" Background="#FFFF9435" Foreground="White" BorderBrush="White">
+        <Button Content="Resserve" HorizontalAlignment="Left" Margin="436,254,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.044,0.419" Height="35" Width="97" Command="{Binding makeReservation}" FontSize="14" Background="#FFFF9435" Foreground="White" BorderBrush="White">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -50,21 +50,8 @@
         </Button>
 
 
-        <ListView x:Name="ReservationList" SelectedItem="{Binding selectedRow}" ItemsSource="{Binding ListOfReservations}" Margin="203,263,299,10">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding id}" />
-                    <GridViewColumn Header="Student" DisplayMemberBinding="{Binding id_Student}" />
-                    <GridViewColumn Header="Book" DisplayMemberBinding="{Binding id_Book}" />
-                    <GridViewColumn Header="Date" DisplayMemberBinding="{Binding dateOfReserv}" />
 
-                </GridView>
-            </ListView.View>
-        </ListView>
-
-
-
-        <Label Content="Student Number" HorizontalAlignment="Left" Margin="235,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="29" Width="114">
+        <Label Content="Student Number" HorizontalAlignment="Left" Margin="240,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="29" Width="114">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -74,7 +61,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Book Number" HorizontalAlignment="Left" Margin="236,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="29" Width="96">
+        <Label Content="Book Number" HorizontalAlignment="Left" Margin="243,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="29" Width="96">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -84,10 +71,11 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="506,263,0,0" VerticalAlignment="Top" Height="33" Width="83" Command="{Binding removeReservation}" FontSize="14" Background="#FFFF9435" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.21,0.375"/>
         <local:Header HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="764"/>
-        <Label Content="Manage Reservations" HorizontalAlignment="Left" Margin="267,18,0,0" VerticalAlignment="Top" Height="64" Width="256" FontSize="24"/>
+        <Label Content="Manage Reservations" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" Height="64" Width="256" FontSize="24"/>
         <Rectangle HorizontalAlignment="Left" Height="525" Stroke="Black" VerticalAlignment="Top" Width="129" Margin="0,-24,0,0"/>
+        <Button Content="Reservations List" HorizontalAlignment="Left" Margin="638,83,0,0" VerticalAlignment="Top" Height="34" Width="122" Command="{Binding ReservationsOps}" Background="#FF171616" Foreground="White"/>
 
     </Grid>
+
 </UserControl>

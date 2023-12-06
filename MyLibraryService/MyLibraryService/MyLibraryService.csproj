@@ -118,6 +118,7 @@
     <Compile Include="MyServices\IBookService.cs" />
     <Compile Include="MyServices\IReservationService.cs" />
     <Compile Include="MyServices\IStudentService.cs" />
+    <Compile Include="MyServices\ReservationInfo.cs" />
     <Compile Include="MyServices\ReservationService.svc.cs">
       <DependentUpon>ReservationService.svc</DependentUpon>
     </Compile>
